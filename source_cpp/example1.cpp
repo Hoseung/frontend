@@ -1,15 +1,8 @@
 Ciphertext fun(Ciphertext a) {
     // Create FHE circuit
     auto b = -a + 2;
-    auto c = a;
-
-    for (int i = 0; i < 5; ++i) {
-        c = c * (-c + 2);
-        b = b * (-c + 2);
-    }
-
-    auto d = b.mean() + c.mean();
-    return d;
+    
+    return b;
 }
 
 int main() {
@@ -17,8 +10,8 @@ int main() {
 
     Ciphertext a = program.add_secret("a", 40);
 
-    auto d = fun(a);
-    program.cppcompile(d);
+    auto b = fun(a);
+    program.cppcompile(b);
 
     return 0;
 }
