@@ -1,0 +1,50 @@
+{
+    "directed": true,
+    "multigraph": false,
+    "graph": {},
+    "nodes": [
+      {
+        "depth": 1,
+        "value": null,
+        "label": "var(a)",
+        "type": "<class 'compyler.cipher_node.FreeNode'>",
+        "root": true,
+        "id": 1
+      },
+      {
+        "depth": 0,
+        "label": "var",
+        "root": false,
+        "type": "<class 'compyler.operations.Var'>",
+        "id": 2
+      },
+      {
+        "depth": 0,
+        "value": null,
+        "label": "a",
+        "params": {
+          "scale": 40,
+          "min_scale": 40,
+          "level": 1000
+        },
+        "root": false,
+        "type": "<class 'compyler.cipher_node.CipherNode'>",
+        "id": 3
+      }
+    ],
+    "links": [
+      {
+        "source": 1,
+        "target": 2
+      },
+      {
+        "source": 2,
+        "target": 3
+      }
+    ],
+    "topsort": [
+      1,
+      2,
+      3
+    ]
+  }

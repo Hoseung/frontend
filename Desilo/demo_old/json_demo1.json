@@ -1,0 +1,95 @@
+{
+    "directed": true,
+    "multigraph": false,
+    "graph": {},
+    "nodes": [
+      {
+        "depth": 2,
+        "value": null,
+        "label": "(negate(a) + 2)",
+        "type": "<class 'compyler.cipher_node.FreeNode'>",
+        "root": true,
+        "id": 1
+      },
+      {
+        "isexecuted": false,
+        "result": null,
+        "depth": 0,
+        "label": "+",
+        "root": false,
+        "type": "<class 'compyler.operations.Addition'>",
+        "id": 2
+      },
+      {
+        "depth": 0,
+        "value": 2,
+        "label": "2",
+        "params": {
+          "scale": null,
+          "min_scale": null,
+          "level": null
+        },
+        "root": false,
+        "type": "<class 'compyler.cipher_node.PlainNode'>",
+        "id": 3
+      },
+      {
+        "depth": 1,
+        "value": null,
+        "label": "negate(a)",
+        "root": false,
+        "type": "<class 'compyler.cipher_node.FreeNode'>",
+        "id": 4
+      },
+      {
+        "depth": 0,
+        "label": "negate",
+        "root": false,
+        "type": "<class 'compyler.operations.Negation'>",
+        "id": 5
+      },
+      {
+        "depth": 0,
+        "value": null,
+        "label": "a",
+        "params": {
+          "scale": 30,
+          "min_scale": 30,
+          "level": 1000
+        },
+        "root": false,
+        "type": "<class 'compyler.cipher_node.CipherNode'>",
+        "id": 6
+      }
+    ],
+    "links": [
+      {
+        "source": 1,
+        "target": 2
+      },
+      {
+        "source": 2,
+        "target": 3
+      },
+      {
+        "source": 2,
+        "target": 4
+      },
+      {
+        "source": 4,
+        "target": 5
+      },
+      {
+        "source": 5,
+        "target": 6
+      }
+    ],
+    "topsort": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ]
+  }
