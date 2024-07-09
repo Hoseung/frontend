@@ -1,7 +1,8 @@
 Ciphertext fun(Ciphertext a) {
     // Create FHE circuit
     auto b = -a + 2;
-    
+    auto c = a - b;
+
     return b;
 }
 
