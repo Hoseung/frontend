@@ -6,6 +6,7 @@ Ciphertext fun(Ciphertext a) {
     return b;
 }
 
+
 int main() {
     FheProgram program("CKKS", {1});
 
