@@ -3,7 +3,7 @@ Ciphertext fun(Ciphertext a) {
     auto b = -a + 2;
     auto c = a - b;
 
-    return b;
+    return c;
 }
 
 
